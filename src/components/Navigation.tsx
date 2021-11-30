@@ -1,9 +1,9 @@
-const Navigation = () => {
+import { NavigationPropsType } from '../types/NavigationPropsType';
+
+const Navigation = (props: NavigationPropsType) => {
   return (
     <>
-      <form>
-        <button>add</button>
-      </form>
+      <button onClick={props.onAddMarkdown}>Markdownを追加する</button>
     </>
   );
 };

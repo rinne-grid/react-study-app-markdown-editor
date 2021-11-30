@@ -1,7 +1,12 @@
-const Editor = () => {
+import { EditorPropsType } from '../types/EditorPropsType';
+
+const Editor = (props: EditorPropsType) => {
   return (
     <>
-      <textarea>**これはBoldのプレビュー**</textarea>
+      <textarea
+        value={props.markdown && props.markdown.source}
+        onChange={props.onChangeSource}
+      ></textarea>
     </>
   );
 };

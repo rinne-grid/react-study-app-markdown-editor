@@ -1,11 +1,11 @@
+import { CardListPropsType } from '../types/CardListPropsType';
 import Card from './Card';
-const CardList = () => {
+const CardList = (props: CardListPropsType) => {
   return (
     <>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {props.markdownList.map((markdown) => (
+        <Card key={markdown.id} markdown={markdown} />
+      ))}
     </>
   );
 };
