@@ -4,7 +4,11 @@ const CardList = (props: CardListPropsType) => {
   return (
     <>
       {props.markdownList.map((markdown) => (
-        <Card key={markdown.id} markdown={markdown} />
+        <Card
+          key={markdown.id}
+          markdown={markdown}
+          setSelected={props.setSelected}
+        />
       ))}
     </>
   );
